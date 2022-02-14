@@ -11,7 +11,7 @@ stage('Build')
 {
  sh "${mavenHome}/bin/mvn clean package"
 }
-/*
+
 stage('ExecuteSonarqube')
 {
 sh "${mavenHome}/bin/mvn sonar:sonar"
@@ -37,7 +37,7 @@ Regards,
 MasthanBasha,
 9704765605.''', cc: '', from: '', replyTo: '', subject: 'Build over', to: 'skmasthanbasha96@gmail.com'
 }
-*/
+
 stage('JobProperties')
 {
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('''* * * * *
