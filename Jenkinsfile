@@ -11,7 +11,7 @@ stage('Build')
 {
  sh "${mavenHome}/bin/mvn clean package"
 }
-
+/*
 stage('ExecuteSonarqube')
 {
 sh "${mavenHome}/bin/mvn sonar:sonar"
@@ -43,4 +43,5 @@ stage('JobProperties')
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('''* * * * *
 ''')])])
 }
+ */
 }
